@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+    </div>
+    <script type="text/x-handlebars-template" id="tpls">
+        {{#each this}}
+        <a href="detail.html?id={{id}}">
+            <li>{{title}}</li>
+        </a>
+        {{/each}}
+    </script>
+
+    <!--<div class="box">
+        <input type="text"><button type="text" id="btn">搜索</button>
+        <div class="list"></div>
+        <script type="text/x-handlebars-template" id="list-tpl">
+            {{#each this}}
+
+            <li>{{this}}</li>
+            {{/each}}
+        </script>
+    </div>-->
+    <script src="./js/libs/require.js"></script>
+    <script>
+        require(['./js/main.js'], function() {
+            require(['index'])
+        })
+    </script>
+</body>
+
+</html>
